@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppCoder.views import padres, hermanos, nietos, lista_hermanos, lista_padres
+from AppCoder.views import padres, hermanos, nietos, lista_hermanos, lista_padres, lista_nietos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,5 @@ urlpatterns = [
     path('nietos/<nombre>/<edad>/<apellido>', nietos),
     path("lista-hermanos", lista_hermanos),
     path("lista-padres", lista_padres),
-    
-]
+    path("lista-nietos", lista_nietos),
+    ]

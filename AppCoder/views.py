@@ -37,3 +37,9 @@ def lista_padres(request):
     lista= Padres.objects.all()
 
     return  render(request, "lista_padres.html", {"lista_padres": lista})
+
+def lista_nietos(request):
+
+    lista= Nietos.objects.all()
+
+    return  render(request, "lista_nietos.html", {"lista_nietos": lista})
