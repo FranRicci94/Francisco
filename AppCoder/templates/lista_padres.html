@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Padres</title>
+</head>
+<body>
+    <ul>
+
+        
+        {% for padre in lista_padres %}
+                <li>{{padre.nombre}} - {{padre.apellido}} {{padre.edad}}</li>
+            
+        {% endfor %}
+            
+    </ul>
+    
+</body>
+</html>
