@@ -49,3 +49,20 @@ def lista_nietos(request) -> HttpResponse:
     lista = Nietos.objects.all()
 
     return render(request, "lista_nietos.html", {"lista_nietos": lista})
+
+
+def inicio(request):
+
+    return HttpResponse("vista inicio")
+
+def padres(request):
+
+    return HttpResponse("vista padres")
+
+def hermanos(request):
+
+    return HttpResponse("vista hermanos")
+
+def nietos(request):
+
+    return HttpResponse("vista nietos")
