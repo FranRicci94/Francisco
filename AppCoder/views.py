@@ -1,5 +1,6 @@
 # from http.client import HttpResponse
 
+from cgitb import html
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -53,16 +54,16 @@ def lista_nietos(request) -> HttpResponse:
 
 def inicio(request):
 
-    return HttpResponse("vista inicio")
+    return render(request,"vista_inicio.html")
 
 def padres(request):
 
-    return HttpResponse("vista padres")
+    return render(request,"lista_padres.html")
 
 def hermanos(request):
 
-    return HttpResponse("vista hermanos")
+    return render(request,"lista_hermanos.html")
 
 def nietos(request):
 
-    return HttpResponse("vista nietos")
+    return render(request,"lista_nietos.html")
