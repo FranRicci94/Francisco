@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nietos</title>
-</head>
-<body>
-    
-    <h1>Hola esta es la lista de nietos</h1>
-    <u>  
-    
-        {% for nieto in lista_nietos %}
-        <li>{{nieto.nombre}} - {{nieto.apellido}} {{nieto.edad}}</li>
+{% extends 'padre.html' %}
 
-        {% endfor %}
-    </u>
-</body>
-</html>
+{% load static %}
+
+{% block ContenidoQueCambia %}
+<h1>Bienvenido a nuestra pagina</h1>
+<ul>Estas son las entregas
+    <li>12</li>
+    <li>17</li>
+    <li>24</li>
+    <li>561</li>
+</ul>
+
+{% endblock ContenidoQueCambia %}

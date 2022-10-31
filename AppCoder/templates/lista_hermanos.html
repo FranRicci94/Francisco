@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista hermanos</title>
-</head>
-<body>
+{% extends 'padre.html' %}
 
-    <ul>
+{% load static %}
 
+{% block ContenidoQueCambia %}
+<h1>Bienvenido a nuestra pagina</h1>
+<ul>lista de hermanos
+    
+    {% for hermano in lista_hermanos %}
+        <li>{{hermano.nombre}}, {{hermano.edad}}, {{hermano.apellido}}</li>
         
-        {% for hermano in lista_hermanos %}
-                <li>{{hermano.nombre}} - {{hermano.apellido}} {{hermano.edad}}</li>
-            
-        {% endfor %}
-            
-    </ul>
-</body>
-</html>
+    {% endfor %}
+        
+</ul>
+
+{% endblock ContenidoQueCambia %}

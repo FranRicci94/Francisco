@@ -8,10 +8,10 @@ urlpatterns = [
     path('padres/<nombre>/<edad>/<apellido>', padres),
     path('hermanos/<nombre>/<edad>/<apellido>', hermanos),
     path('nietos/<nombre>/<edad>/<apellido>', nietos),
-    path("lista-hermanos", lista_hermanos,),
-    path("lista-padres", lista_padres),
+    path("lista-hermanos", lista_hermanos, name="listahermanos"),
+    path("lista-padres", lista_padres, name="listapadres"),
     path("padres/", padres),
     path("nietos/", nietos, name="Nietos"),
     path("hermanos/", hermanos),
-    path("", inicio),
+    path("", inicio, name="inicio"),
 ]

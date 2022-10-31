@@ -52,17 +52,22 @@ def lista_nietos(request) -> HttpResponse:
     return render(request, "lista_nietos.html", {"lista_nietos": lista})
 
 
+
+
+
+
+
 def inicio(request):
 
     return render(request,"vista_inicio.html")
 
 def padres(request):
-
-    return render(request,"lista_padres.html")
+    
+    return render(request,"lista_padres.html",)
 
 def hermanos(request):
-
-    return render(request,"lista_hermanos.html")
+    lista = Hermanos.objects.all()
+    return render(request,"lista_hermanos.html", {"lista_hermanos": lista})
 
 def nietos(request):
 
