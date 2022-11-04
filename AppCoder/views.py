@@ -1,9 +1,7 @@
+# from http.client import HttpResponse
 
-from django.shortcuts import redirect
 from cgitb import html
-from contextlib import redirect_stderr
 from posixpath import relpath
-from sqlite3 import Cursor
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -43,11 +41,6 @@ def lista_hermanos(request) -> HttpResponse:
 
 def lista_padres(request) -> HttpResponse:
 
-    apellido=request.POST["Apellido"]
-    papa=request.POST["Nombre"] 
-    edad=request.POST["Edad"]
-    familiar=Padres(nombre=papa, apellido=apellido, edad=edad)
-    familiar.save()
     lista = Padres.objects.all()
 
     return render(request, "lista_padres.html", {"lista_padres": lista})
@@ -84,4 +77,7 @@ def nietos(request):
 
 def FormularioFamiliares(request):
 
-    return render(request, 'FormularioFamiliares.html')
+    print('method', request.method)
+    print('POST', request.POST)
+ 
+    return render(request, "FormularioFamiliares.html")
