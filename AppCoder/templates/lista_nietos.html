@@ -4,11 +4,15 @@
 
 {% block ContenidoQueCambia %}
 <h1>Bienvenido a nuestra pagina</h1>
-<ul>Estas son las entregas
-    <li>12</li>
-    <li>17</li>
-    <li>24</li>
-    <li>561</li>
+<ul>
+    <h1>lista de Nietos</h1>
+    
+    {% for nieto in lista_nietos %}
+        <li>{{nieto.nombre}}, {{nieto.edad}}, {{nieto.apellido}}</li>
+        
+    {% endfor %}
+        
+
 </ul>
 
 {% endblock ContenidoQueCambia %}
